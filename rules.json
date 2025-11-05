@@ -1,0 +1,74 @@
+[
+  {
+    "conclusion": "WordPress",
+    "conditions": {
+      "complexity": "low",
+      "budget": "low",
+      "time": "short"
+    }
+  },
+  {
+    "conclusion": "Wix / Tilda",
+    "conditions": {
+      "complexity": "low",
+      "budget": "low",
+      "scale": "personal"
+    }
+  },
+  {
+    "conclusion": "HTML/CSS + JS + Node.js",
+    "conditions": {
+      "complexity": "medium",
+      "budget": "medium",
+      "time": "medium"
+    }
+  },
+  {
+    "conclusion": "React + Django + PostgreSQL",
+    "conditions": {
+      "complexity": "high",
+      "performance": "high",
+      "time": "medium"
+    }
+  },
+  {
+    "conclusion": "Angular + Spring Boot + MySQL",
+    "conditions": {
+      "complexity": "high",
+      "budget": "high",
+      "scale": "large project",
+      "performance": "high"
+    }
+  },
+  {
+    "conclusion": "Vue.js + Firebase",
+    "conditions": {
+      "complexity": "medium",
+      "time": "short"
+    }
+  },
+  {
+    "conclusion": "Next.js + MongoDB Atlas",
+    "conditions": {
+      "complexity": "high",
+      "time": "medium",
+      "scale": "small business"
+    }
+  },
+  {
+    "conclusion": "Laravel + MySQL",
+    "conditions": {
+      "complexity": "medium",
+      "budget": "medium",
+      "scale": "small business"
+    }
+  },
+  {
+    "conclusion": "ASP.NET Core + SQL Server",
+    "conditions": {
+      "complexity": "high",
+      "scale": "large project",
+      "performance": "high"
+    }
+  }
+]
