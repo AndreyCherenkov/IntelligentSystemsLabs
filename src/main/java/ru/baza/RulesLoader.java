@@ -14,8 +14,7 @@ public class RulesLoader {
     public static final String DEFAULT_RULES_PATH = "rules.json";
     public static final List<Rule> RULES = loadRules(DEFAULT_RULES_PATH);
 
-    private RulesLoader() {
-    }
+    private RulesLoader() {}
 
     /**
      * Загружает правила из JSON-файла
@@ -41,7 +40,7 @@ public class RulesLoader {
                 return Collections.emptyList();
             }
 
-            System.out.println("✅ Loaded rules: " + rules.size());
+            System.out.println("✅ Загружено правил: " + rules.size());
             return Collections.unmodifiableList(rules);
 
         } catch (IOException e) {
