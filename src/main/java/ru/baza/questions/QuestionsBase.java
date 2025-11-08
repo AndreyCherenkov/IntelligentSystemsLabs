@@ -1,18 +1,18 @@
-package ru.baza;
+package ru.baza.questions;
 
 import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import static ru.baza.Answer.*;
-import static ru.baza.Condition.*;
+import static ru.baza.questions.Answer.*;
+import static ru.baza.questions.Condition.*;
 
-public class KnowledgeBase {
+public class QuestionsBase {
 
     public static final Map<Condition, String> QUESTIONS;
     public static final Map<Condition, String> ANSWERS;
 
-    private KnowledgeBase() {}
+    private QuestionsBase() {}
 
     static {
         var questions = new LinkedHashMap<Condition, String>();
