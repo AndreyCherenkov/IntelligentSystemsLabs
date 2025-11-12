@@ -14,7 +14,6 @@ public class Main {
 
         var facts = new FactCollector(QuestionsBase.QUESTIONS, QuestionsBase.ANSWERS).collectFacts();
 
-        // Проверяем, можем ли доказать WordPress
         try {
             boolean result = engine.backwardChain(kb, facts,"Angular + Spring Boot + MySQL");
             boolean result1 = engine.backwardChain(kb, facts,"React + Django + PostgreSQL");

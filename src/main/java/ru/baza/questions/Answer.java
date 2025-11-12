@@ -1,9 +1,5 @@
-package ru.baza;
+package ru.baza.questions;
 
-import com.google.gson.annotations.JsonAdapter;
-import ru.baza.adapter.AnswerAdapter;
-
-@JsonAdapter(AnswerAdapter.class)
 public enum Answer {
     LOW("low"),
     SHORT("short"),
@@ -14,13 +10,9 @@ public enum Answer {
     SMALL_BUSINESS("small business"),
     UNCERTAINTY("uncertainty")
     ;
-    String text;
+    final String text;
 
     Answer(String text) {
         this.text = text;
-    }
-
-    public String getText() {
-        return text;
     }
 }
