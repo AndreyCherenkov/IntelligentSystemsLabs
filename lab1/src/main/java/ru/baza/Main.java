@@ -9,13 +9,14 @@ import java.lang.reflect.InvocationTargetException;
 
 public class Main {
     public static void main(String[] args) {
-        RuleEngine engine = new RuleEngine();
-        WebKnowledgeBase kb = new WebKnowledgeBase();
+        var engine = new RuleEngine();
+        var kb = new WebKnowledgeBase();
 
         var facts = new FactCollector(QuestionsBase.QUESTIONS, QuestionsBase.ANSWERS).collectFacts();
-
+        System.out.println(facts);
         try {
-            boolean result = engine.backwardChain(kb, facts,"Angular + Spring Boot + MySQL");
+            //todo пофиксить обратный цепочечный выод
+            boolean result = engine.backwardChain(kb, facts,"AngularSpringMySQL");
             boolean result1 = engine.backwardChain(kb, facts,"React + Django + PostgreSQL");
             System.out.println(result);
             System.out.println(result1);
@@ -23,5 +24,6 @@ public class Main {
         } catch (InvocationTargetException | IllegalAccessException e) {
             throw new RuntimeException(e);
         }
+
     }
 }

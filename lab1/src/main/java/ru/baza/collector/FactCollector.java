@@ -23,7 +23,7 @@ public class FactCollector extends AbstractFactCollector<Condition, String, Stri
 
             System.out.print("Введите вариант предложенного ответа (цифра): ");
             var answer = QuestionsBase.getUserAnswer(condition, scanner.nextInt());
-            userAnswers.add(new Fact(condition.name(), answer.name()));
+            userAnswers.add(new Fact(condition.name(), answer.getText()));
         }
 
         return userAnswers;

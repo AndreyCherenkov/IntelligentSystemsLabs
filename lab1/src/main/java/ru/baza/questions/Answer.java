@@ -10,9 +10,13 @@ public enum Answer {
     SMALL_BUSINESS("small business"),
     UNCERTAINTY("uncertainty")
     ;
-    final String text;
+    private final String text;
 
     Answer(String text) {
         this.text = text;
+    }
+
+    public String getText() {
+        return text;
     }
 }

@@ -1,6 +1,5 @@
 package ru.baza.engine;
 
-import ru.baza.annotations.FactCondition;
 import ru.baza.annotations.Rule;
 import ru.baza.knowledges.KnowledgeBase;
 import ru.baza.model.Fact;
@@ -55,7 +54,7 @@ public class RuleEngine {
         System.out.println("🎯 Проверяем цель: " + goal);
 
         // Проверяем, может ли цель быть уже известным фактом
-        boolean known = facts.stream().anyMatch(f -> f.name().equalsIgnoreCase(goal) || f.value().equalsIgnoreCase(goal));
+        var known = facts.stream().anyMatch(f -> f.name().equalsIgnoreCase(goal) || f.value().equalsIgnoreCase(goal));
         if (known) {
             System.out.println("✅ Цель " + goal + " уже известна из фактов.");
             return true;
@@ -65,21 +64,20 @@ public class RuleEngine {
         for (Method method : knowledgeBase.getClass().getDeclaredMethods()) {
             if (!method.isAnnotationPresent(Rule.class)) continue;
 
-            String conclusion = extractConclusionFromMethod(method);
+            var conclusion = extractConclusionFromMethod(method);
             if (!conclusion.equalsIgnoreCase(goal)) continue;
 
-            Rule rule = method.getAnnotation(Rule.class);
-            FactCondition[] conditions = rule.all();
+            var rule = method.getAnnotation(Rule.class);
+            var conditions = rule.all();
 
             System.out.println("📘 Найдено правило для " + goal + ": " + method.getName());
 
-            boolean allSatisfied = true;
-            for (FactCondition cond : conditions) {
-                boolean factKnown = facts.stream().anyMatch(f -> f.matches(cond));
+            var allSatisfied = true;
+            for (var cond : conditions) {
+                var factKnown = facts.stream().anyMatch(f -> f.matches(cond));
                 if (!factKnown) {
                     System.out.println("🔍 Факта " + cond.name() + "=" + cond.value() + " нет. Пытаемся доказать...");
-                    // Рекурсивно пытаемся доказать условие
-                    boolean proved = backwardChain(knowledgeBase, facts, cond.value());
+                    var proved = backwardChain(knowledgeBase, facts, cond.value());
                     if (!proved) {
                         allSatisfied = false;
                         break;
@@ -100,7 +98,7 @@ public class RuleEngine {
     }
 
     private String extractConclusionFromMethod(Method method) {
-        String name = method.getName();
+        var name = method.getName();
         if (name.startsWith("rule")) {
             return name.substring(4);
         }

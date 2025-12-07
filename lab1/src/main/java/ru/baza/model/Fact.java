@@ -12,7 +12,7 @@ public record Fact(String name, String value) {
 
     @Override
     public String toString() {
-        return name + "=" + value;
+        return name.toLowerCase() + "=" + value.toLowerCase();
     }
 
     @Override

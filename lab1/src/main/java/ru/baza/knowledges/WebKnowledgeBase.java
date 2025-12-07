@@ -62,7 +62,7 @@ public class WebKnowledgeBase implements KnowledgeBase {
             }
     )
     public void ruleAngularSpringMySQL() {
-        System.out.println("🏗️ Рекомендация: Angular + Spring Boot + MySQL — крупные корпоративные проекты, высокая производительность.");
+        System.out.println("Angular + Spring Boot + MySQL");
     }
 
     @Rule(
