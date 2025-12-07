@@ -16,7 +16,7 @@ public class WebKnowledgeBase implements KnowledgeBase {
                     @FactCondition(name = "time", value = "short")
             }
     )
-    public void ruleWordPress() {
+    private void ruleWordPress() {
         System.out.println("📦 Рекомендация: WordPress — быстрая разработка при низкой сложности и коротких сроках.");
     }
 
@@ -27,7 +27,7 @@ public class WebKnowledgeBase implements KnowledgeBase {
                     @FactCondition(name = "scale", value = "personal")
             }
     )
-    public void ruleWixTilda() {
+    private void ruleWixTilda() {
         System.out.println("🌐 Рекомендация: Wix / Tilda — онлайн-конструкторы для личных проектов при низком бюджете.");
     }
 
@@ -38,7 +38,7 @@ public class WebKnowledgeBase implements KnowledgeBase {
                     @FactCondition(name = "time", value = "medium")
             }
     )
-    public void ruleHtmlCssJsNode() {
+    private void ruleHtmlCssJsNode() {
         System.out.println("💻 Рекомендация: HTML/CSS + JS + Node.js — универсальное решение для сайтов средней сложности.");
     }
 
@@ -49,7 +49,7 @@ public class WebKnowledgeBase implements KnowledgeBase {
                     @FactCondition(name = "time", value = "medium")
             }
     )
-    public void ruleReactDjangoPostgres() {
+    private void ruleReactDjangoPostgres() {
         System.out.println("⚙️ Рекомендация: React + Django + PostgreSQL — оптимально для сложных, производительных систем.");
     }
 
@@ -61,7 +61,7 @@ public class WebKnowledgeBase implements KnowledgeBase {
                     @FactCondition(name = "performance", value = "high")
             }
     )
-    public void ruleAngularSpringMySQL() {
+    private void ruleAngularSpringMySQL() {
         System.out.println("Angular + Spring Boot + MySQL");
     }
 
@@ -71,7 +71,7 @@ public class WebKnowledgeBase implements KnowledgeBase {
                     @FactCondition(name = "time", value = "short")
             }
     )
-    public void ruleVueFirebase() {
+    private void ruleVueFirebase() {
         System.out.println("🔥 Рекомендация: Vue.js + Firebase — быстрое создание динамичных сайтов средней сложности.");
     }
 
@@ -82,7 +82,7 @@ public class WebKnowledgeBase implements KnowledgeBase {
                     @FactCondition(name = "scale", value = "small business")
             }
     )
-    public void ruleNextMongo() {
+    private void ruleNextMongo() {
         System.out.println("🚀 Рекомендация: Next.js + MongoDB Atlas — идеальный выбор для небольшого бизнеса с современным стеком.");
     }
 
@@ -93,7 +93,7 @@ public class WebKnowledgeBase implements KnowledgeBase {
                     @FactCondition(name = "scale", value = "small business")
             }
     )
-    public void ruleLaravelMySQL() {
+    private void ruleLaravelMySQL() {
         System.out.println("🧩 Рекомендация: Laravel + MySQL — надёжный вариант для бизнеса среднего уровня.");
     }
 
@@ -104,7 +104,7 @@ public class WebKnowledgeBase implements KnowledgeBase {
                     @FactCondition(name = "performance", value = "high")
             }
     )
-    public void ruleAspNetSQLServer() {
+    private void ruleAspNetSQLServer() {
         System.out.println("💼 Рекомендация: ASP.NET Core + SQL Server — решение корпоративного уровня для больших систем.");
     }
 }
