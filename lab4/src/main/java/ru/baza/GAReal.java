@@ -24,7 +24,7 @@ public class GAReal extends GeneticAlgorithm<Double> {
     static final int POP_SIZE = 50;
 
     /** Количество поколений. */
-    static final int GENERATIONS = 100;
+    static final int GENERATIONS = 10;
 
     /** Вероятность мутации. */
     static final double MUTATION_RATE = 0.1;
